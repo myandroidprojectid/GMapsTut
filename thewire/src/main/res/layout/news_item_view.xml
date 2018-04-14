@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardBackgroundColor="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="0dp"
+            android:layout_weight="3.5"
+            android:scaleType="fitXY"
+            android:src="@drawable/sbi"/>
+
+        <RelativeLayout
+            android:id="@+id/new_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:layout_toRightOf="@+id/news_image"
+            android:padding="@dimen/news_padding"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/news_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="7 April"/>
+            <TextView
+                android:id="@+id/news_headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_date"
+                android:gravity="center_vertical"
+                android:lines="5"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="Headline"/>
+            <TextView
+                android:id="@+id/news_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_headline"
+                android:text="News By:"/>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
